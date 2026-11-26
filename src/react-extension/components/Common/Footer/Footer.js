@@ -160,8 +160,13 @@ class Footer extends Component {
           </li>
           {/* [anima] Aviso AGPL-3.0 §13: oferta do código-fonte da versão modificada. Ver README-ANIMA.md. */}
           <li className="anima-source-notice">
-            <a href="https://github.com/Anima-Solutions/anima-vault" target="_blank" rel="noopener noreferrer">
-              Baseado no Passbolt (AGPL-3.0) · Código-fonte
+            <a
+              href="https://github.com/Anima-Solutions/anima-vault"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="O Ânima Vault é baseado no Passbolt, distribuído sob a licença AGPL-3.0"
+            >
+              Código-fonte (AGPL)
             </a>
           </li>
         </ul>
