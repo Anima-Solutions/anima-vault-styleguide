@@ -32,6 +32,12 @@ Gerados por `anima-vault/scripts/build-assets.sh`. **Não edite à mão.**
 - `src/img/svg/logo.svg` (componente SVGR do cabeçalho, importado por ~15 componentes) e `src/img/svg/passbolt.svg`.
 - `src/img/svg/*` (190 ícones de UI): Lucide → **Phosphor bold** (o padrão do DS), gerados por `anima-vault/scripts/build-icons.mjs` a partir de `anima-vault/brand/icons.json`. Mesmos nomes, largura e altura; cor via `var(--icon-color)` e estado preenchido via `var(--icon-background-color)`, como no upstream. Animações, ilustrações e imagens de produto (21 arquivos, lista `keep`) não mudam. Nos testes os SVGs são mocks (`test/mocks/svg.js`). Um ícone novo no upstream faz o script falhar até ser mapeado.
 
+- `src/img/illustrations/`, gerados por `anima-vault/tools/assets/make_illustrations.py`:
+  - `pin_passbolt.gif`: "fixe a extensão" do setup no Chrome. É uma cena **estática** (o upstream é uma animação com a marca Passbolt) e continua `.gif` porque o nome é referenciado pelo CSS e pelo webpack da extensão;
+  - `passphrase_intro.svg`: o desenho do upstream recolorido com os tokens do DS;
+  - `email.png`: envelope com Phosphor e as cores da marca.
+  - `wave-pin_my_extension.svg` não muda: é uma máscara pintada com a cor do tema.
+
 > O logo "Ânima Vault" é **TEMPORÁRIO**: o logotipo Ânima + "Vault" em Inter, até o DS publicar o logo oficial da solução.
 
 ## Arquivos do upstream alterados (patches)
