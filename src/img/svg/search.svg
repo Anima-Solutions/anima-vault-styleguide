@@ -1,15 +1,7 @@
 <!--
-  The SVGs code is based on the Lucide library, licensed under the LGPL License.
-  https://github.com/lucide-icons/lucide
-
-  Copyright (c) Lucide Authors
-
-  Modifications made by Passbolt SA.
-   - Renaming colors and file name of SVGs.
-
-  @url https://github.com/lucide-icons/lucide/tree/main/icons
+  GERADO por anima-vault/scripts/build-icons.mjs a partir de brand/icons.json. Não edite à mão.
+  Ícone: Phosphor Icons v2.1.1 (MIT), https://phosphoricons.com
 -->
-<svg width="25" height="24" viewBox="0 0 25 24" fill="none">
-<path d="M11.5969 19C16.0152 19 19.5969 15.4183 19.5969 11C19.5969 6.58172 16.0152 3 11.5969 3C7.17865 3 3.59692 6.58172 3.59692 11C3.59692 15.4183 7.17865 19 11.5969 19Z" stroke="var(--icon-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M21.5969 21.0004L17.2469 16.6504" stroke="var(--icon-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 256 256" fill="none">
+  <path fill="var(--icon-color)" d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z"/>
 </svg>

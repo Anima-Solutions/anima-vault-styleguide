@@ -1,17 +1,7 @@
 <!--
-  The SVGs code is based on the Lucide library, licensed under the LGPL License.
-  https://github.com/lucide-icons/lucide
-
-  Copyright (c) Lucide Authors
-
-  Modifications made by Passbolt SA.
-   - Renaming colors and file name of SVGs.
-
-  @url https://github.com/lucide-icons/lucide/tree/main/icons
+  GERADO por anima-vault/scripts/build-icons.mjs a partir de brand/icons.json. Não edite à mão.
+  Ícone: Phosphor Icons v2.1.1 (MIT), https://phosphoricons.com
 -->
-<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M6.75 8.25C8.40685 8.25 9.75 6.90685 9.75 5.25C9.75 3.59315 8.40685 2.25 6.75 2.25C5.09315 2.25 3.75 3.59315 3.75 5.25C3.75 6.90685 5.09315 8.25 6.75 8.25Z" stroke="var(--icon-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M7.5 11.25H4.5C3.70435 11.25 2.94129 11.5661 2.37868 12.1287C1.81607 12.6913 1.5 13.4544 1.5 14.25V15.75" stroke="var(--icon-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M13.1989 16.3978C14.9656 16.3978 16.3978 14.9656 16.3978 13.1989C16.3978 11.4322 14.9656 10 13.1989 10C11.4322 10 10 11.4322 10 13.1989C10 14.9656 11.4322 16.3978 13.1989 16.3978Z" stroke="var(--icon-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M13.1992 12V13.4991L14.201 14" stroke="var(--icon-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 256" fill="none">
+  <path fill="var(--icon-color)" d="M181.36,114.73l-48,24A12,12,0,0,1,116,128V72a12,12,0,0,1,24,0v36.58l30.63-15.31a12,12,0,1,1,10.73,21.46Zm45.72,120.86a12,12,0,0,1-14.68-8.51C210,218.2,201.65,212,192,212s-18,6.2-20.4,15.08A12,12,0,0,1,160,236a11.77,11.77,0,0,1-3.09-.41,12,12,0,0,1-8.52-14.68,43.76,43.76,0,0,1,15.08-23,36,36,0,1,1,57,0,43.7,43.7,0,0,1,15.08,23A12,12,0,0,1,227.08,235.59ZM180,176a12,12,0,1,0,12-12A12,12,0,0,0,180,176Zm-62.52,35.35a84,84,0,1,1,93.87-93.87,12,12,0,1,0,23.81-3A108,108,0,1,0,114.51,235.16a11,11,0,0,0,1.5.1,12,12,0,0,0,1.47-23.91Z"/>
 </svg>

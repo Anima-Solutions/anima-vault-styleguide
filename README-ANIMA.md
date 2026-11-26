@@ -30,6 +30,7 @@ Gerados por `anima-vault/scripts/build-assets.sh`. **Não edite à mão.**
 
 - `src/img/logo/*`: ícones da extensão (normal, inativo, badges), `logo*.svg`/`logo*.png`.
 - `src/img/svg/logo.svg` (componente SVGR do cabeçalho, importado por ~15 componentes) e `src/img/svg/passbolt.svg`.
+- `src/img/svg/*` (190 ícones de UI): Lucide → **Phosphor bold** (o padrão do DS), gerados por `anima-vault/scripts/build-icons.mjs` a partir de `anima-vault/brand/icons.json`. Mesmos nomes, largura e altura; cor via `var(--icon-color)` e estado preenchido via `var(--icon-background-color)`, como no upstream. Animações, ilustrações e imagens de produto (21 arquivos, lista `keep`) não mudam. Nos testes os SVGs são mocks (`test/mocks/svg.js`). Um ícone novo no upstream faz o script falhar até ser mapeado.
 
 > O logo "Ânima Vault" é **TEMPORÁRIO**: o logotipo Ânima + "Vault" em Inter, até o DS publicar o logo oficial da solução.
 

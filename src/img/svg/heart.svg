@@ -1,16 +1,7 @@
 <!--
-  The SVGs code is based on the Lucide library, licensed under the LGPL License.
-  https://github.com/lucide-icons/lucide
-
-  Copyright (c) Lucide Authors
-
-  Modifications made by Passbolt SA.
-   - Renaming colors and file name of SVGs.
-
-  @url https://github.com/lucide-icons/lucide/tree/main/icons
+  GERADO por anima-vault/scripts/build-icons.mjs a partir de brand/icons.json. Não edite à mão.
+  Ícone: Phosphor Icons v2.1.1 (MIT), https://phosphoricons.com
 -->
-<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-    <g clip-path="url(#clip0_93_734678)">
-        <path d="M13.4967 9.33333C14.49 8.36 15.4967 7.19333 15.4967 5.66667C15.4967 4.69421 15.1104 3.76158 14.4228 3.07394C13.7351 2.38631 12.8025 2 11.83 2C10.6567 2 9.83003 2.33333 8.83003 3.33333C7.83003 2.33333 7.00336 2 5.83003 2C4.85757 2 3.92494 2.38631 3.2373 3.07394C2.54967 3.76158 2.16336 4.69421 2.16336 5.66667C2.16336 7.2 3.16336 8.36667 4.16336 9.33333L8.83003 14L13.4967 9.33333Z" stroke="var(--icon-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 256 256" fill="none">
+  <path fill="var(--icon-color)" d="M178,36c-20.09,0-37.92,7.93-50,21.56C115.92,43.93,98.09,36,78,36a66.08,66.08,0,0,0-66,66c0,72.34,105.81,130.14,110.31,132.57a12,12,0,0,0,11.38,0C138.19,232.14,244,174.34,244,102A66.08,66.08,0,0,0,178,36Zm-5.49,142.36A328.69,328.69,0,0,1,128,210.16a328.69,328.69,0,0,1-44.51-31.8C61.82,159.77,36,131.42,36,102A42,42,0,0,1,78,60c17.8,0,32.7,9.4,38.89,24.54a12,12,0,0,0,22.22,0C145.3,69.4,160.2,60,178,60a42,42,0,0,1,42,42C220,131.42,194.18,159.77,172.51,178.36Z"/>
 </svg>

@@ -1,17 +1,7 @@
 <!--
-  The SVGs code is based on the Lucide library, licensed under the LGPL License.
-  https://github.com/lucide-icons/lucide
-
-  Copyright (c) Lucide Authors
-
-  Modifications made by Passbolt SA.
-   - Renaming colors and file name of SVGs.
-
-  @url https://github.com/lucide-icons/lucide/tree/main/icons
+  GERADO por anima-vault/scripts/build-icons.mjs a partir de brand/icons.json. Não edite à mão.
+  Ícone: Phosphor Icons v2.1.1 (MIT), https://phosphoricons.com
 -->
-<svg width="19" height="18" viewBox="0 0 19 18" fill="none">
-<path d="M2.84692 9C2.84692 7.20979 3.55808 5.4929 4.82395 4.22703C6.08982 2.96116 7.80671 2.25 9.59692 2.25C11.484 2.2571 13.2952 2.99342 14.6519 4.305L16.3469 6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3" stroke="var(--icon-color)"/>
-<path d="M16.3469 2.25V6H12.5969" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="var(--icon-color)"/>
-<path d="M16.3469 9C16.3469 10.7902 15.6358 12.5071 14.3699 13.773C13.104 15.0388 11.3871 15.75 9.59692 15.75C7.70989 15.7429 5.89865 15.0066 4.54192 13.695L2.84692 12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3" stroke="var(--icon-color)"/>
-<path d="M6.59692 12H2.84692V15.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="var(--icon-color)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 256 256" fill="none">
+  <path fill="var(--icon-color)" d="M228,48V96a12,12,0,0,1-12,12H168a12,12,0,0,1,0-24h19l-7.8-7.8a75.55,75.55,0,0,0-53.32-22.26h-.43A75.49,75.49,0,0,0,72.39,75.57,12,12,0,1,1,55.61,58.41a99.38,99.38,0,0,1,69.87-28.47H126A99.42,99.42,0,0,1,196.2,59.23L204,67V48a12,12,0,0,1,24,0ZM183.61,180.43a75.49,75.49,0,0,1-53.09,21.63h-.43A75.55,75.55,0,0,1,76.77,179.8L69,172H88a12,12,0,0,0,0-24H40a12,12,0,0,0-12,12v48a12,12,0,0,0,24,0V189l7.8,7.8A99.42,99.42,0,0,0,130,226.06h.56a99.38,99.38,0,0,0,69.87-28.47,12,12,0,0,0-16.78-17.16Z"/>
 </svg>
