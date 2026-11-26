@@ -42,3 +42,71 @@ h4 {
 .anima-source-notice a {
   white-space: nowrap;
 }
+
+// ---------------------------------------------------------------------------------------------------------
+// Recursos do Passbolt Pro (Community Edition): aparência desabilitada + "Disponível na versão Pro" no hover.
+// Só CSS: os testes do upstream (jsdom, sem CSS) continuam navegando para as páginas de "teasing".
+// ---------------------------------------------------------------------------------------------------------
+@anima-pro-label: "Disponível na versão Pro";
+
+.anima-pro-tooltip() {
+  content: @anima-pro-label;
+  position: absolute;
+  z-index: 10;
+  padding: .4rem .8rem;
+  border-radius: var(--radius-md);
+  background: var(--popover);
+  color: var(--popover-foreground);
+  box-shadow: var(--shadow-md);
+  font-size: 1.2rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+// Menu lateral da administração: o item inteiro fica inerte (o clique não chega ao botão).
+#administration_menu li:has(> .row svg.pro-teasing-icon) {
+  position: relative;
+  cursor: not-allowed;
+  --Badges-Sparkles: var(--muted-foreground);
+
+  > .row {
+    opacity: .45;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    .anima-pro-tooltip();
+    left: 1.6rem;
+    top: calc(100% - .4rem);
+  }
+}
+
+// Cards da página inicial da administração. O card é o próprio botão: não dá para bloquear o clique só com
+// CSS sem perder o hover, então ele continua abrindo a página de apresentação do recurso (sem upsell, abaixo).
+button.card:has(.title-wrapper > svg) {
+  position: relative;
+  cursor: not-allowed;
+  --Badges-Sparkles: var(--muted-foreground);
+
+  > * {
+    opacity: .45;
+  }
+
+  &:hover {
+    background: transparent;
+  }
+
+  &:hover::after {
+    .anima-pro-tooltip();
+    left: 1.6rem;
+    bottom: -1.2rem;
+  }
+}
+
+// Upsell: botões e links para compra, teste grátis e preços do Passbolt ficam ocultos.
+a[href*="passbolt.com/ce-to-pro"],
+a[href*="passbolt.com/pricing"],
+a[href*="passbolt.com/contact/pro"] {
+  display: none !important;
+}

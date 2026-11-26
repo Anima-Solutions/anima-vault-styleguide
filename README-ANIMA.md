@@ -17,12 +17,21 @@ A orquestração (sync do Design System, geração de assets, textos de marca, b
 | `src/less/anima/ds/VERSION` | Versão do DS sincronizada | **Gerado** |
 | `src/fonts/anima/` | woff2 da Inter + `OFL.txt` | **Gerado** |
 | `src/less/anima/colors.less` | Tokens do DS → variáveis do Passbolt (paleta do Midgar + ~80 variáveis semânticas + raios) | À mão |
-| `src/less/anima/overrides.less` | Tipografia e elevação (sobreposição, sem editar arquivos base) | À mão |
+| `src/less/anima/overrides.less` | Tipografia, elevação, aviso AGPL no rodapé, recursos Pro desabilitados e upsell oculto (sobreposição, sem editar arquivos base) | À mão |
 | `src/less/anima/anima.less` | Junta tudo; importado no fim de cada entrada do tema | À mão |
 | `src/less/themes/anima/*.less` | Entradas do tema: cópia das do Midgar + `@import "../../anima/anima.less"` | À mão |
 | `config/anima/copyAnimaTheme.js` | Plugin de webpack: publica `css/themes/anima/*` por cima de **todas** as pastas de tema | À mão |
 
 **Tema único:** a extensão e o servidor carregam `css/themes/<tema do usuário>/…`. Como o plugin escreve o CSS Ânima em todas as pastas (default, midgar, solarized_*, sakura, layette e qualquer tema novo do upstream), qualquer preferência cai no tema Ânima. Não há patch nas whitelists de tema.
+
+### Recursos do Passbolt Pro
+
+Na Community Edition, a administração mostra os recursos Pro com um ícone de faíscas. No Ânima Vault (só CSS, em `overrides.less`):
+- **Menu lateral:** o item fica esmaecido, não responde ao clique e mostra "Disponível na versão Pro" no hover.
+- **Cards da página inicial da administração:** mesma aparência e mesmo aviso. O clique continua abrindo a página de apresentação do recurso, porque bloqueá-lo exigiria patch de JS (os testes do upstream clicam nesses cards).
+- **Upsell:** links para `passbolt.com/ce-to-pro`, `/pricing` e `/contact/pro` ficam ocultos em toda a UI. Os links da documentação continuam.
+
+O texto do aviso fica no CSS (não passa pelo i18n), porque o produto é pt-BR.
 
 ## Assets substituídos (mesmos nomes do upstream)
 
@@ -57,6 +66,8 @@ Cada linha alterada está marcada com `[anima]`. Num conflito de rebase, reapliq
 `src/locales/**` **nunca** é alterado no git. O nome do produto é aplicado no **empacotamento**, depois dos testes, por `anima-vault/scripts/brand-strings.mjs`. Motivos:
 - os testes do upstream renderizam a UI em en-UK e conferem textos com "passbolt";
 - o Crowdin reescreve esses arquivos a cada release.
+
+**Limitação aceita:** traduções do upstream ficam como estão, mesmo quando imperfeitas (ex.: "senha" em minúsculo em rótulos e colunas, "Português Brasil (beta)" no seletor de idioma). Corrigi-las exigiria manter patches de tradução que o Crowdin reescreve a cada release. Melhorias devem ir para o [Crowdin do Passbolt](https://crowdin.com/project/passbolt).
 
 ## Testes
 
