@@ -22,10 +22,11 @@ class Logo extends Component {
   render() {
     return (
       <div className="top-bar-left">
-        <div className="logo-svg no-img" title="Passbolt logo">
+        {/* [anima] nome do produto no title e no h1 */}
+        <div className="logo-svg no-img" title="Ânima Vault">
           <SVGLogo width="15rem" height="2.6rem" role="img" />
           <h1>
-            <span>Passbolt</span>
+            <span>Ânima Vault</span>
           </h1>
         </div>
       </div>

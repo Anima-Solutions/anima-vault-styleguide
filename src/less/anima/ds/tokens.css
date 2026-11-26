@@ -1,0 +1,180 @@
+/* GERADO por anima-vault/scripts/sync-ds.mjs a partir de @anima-solutions/design-system@2026.11.2. Não edite. */
+/*
+ * Ânima Design System — tokens (custom properties).
+ *
+ * Fonte única dos valores de cor, raio, sombra e fonte. CSS puro, sem @import nem sintaxe do
+ * Tailwind: pode ser usado sozinho (`@anima-solutions/design-system/tokens.css`) em projetos sem
+ * Tailwind ou sem JS. O globals.css importa este arquivo e liga os tokens às utilidades do Tailwind.
+ * Os JSON em formato W3C/DTCG (`tokens/*.json` no pacote) são gerados a partir daqui no build.
+ *
+ * Paleta da marca: Primária #C5FE59 · Secundária #8F7DF8 · Preto #11141B · Branco #F7FAFF.
+ * O tema escuro (.dark) é o tema principal dos mockups; o claro (:root) deriva da mesma paleta.
+ */
+
+/* ---------- Tema claro (derivado) ---------- */
+:root {
+  --radius: 12px;
+
+  /* Escala de raios (fixa, não derivada de --radius) */
+  --radius-sm: 6px; /* acentos pequenos, checkbox */
+  --radius-md: 8px; /* itens de menu/select */
+  --radius-lg: 10px; /* tiles de ícone */
+  --radius-xl: 12px; /* botões, inputs, selects, tabs */
+  --radius-2xl: 16px; /* popovers, menus, linhas de lista */
+  --radius-3xl: 20px; /* painéis internos dos cards */
+  --radius-4xl: 28px; /* cards, dialogs */
+
+  /* Elevação: sombras suaves e escuras, quase imperceptíveis */
+  --shadow-xs: 0 0 #0000;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-md: 0 1px 2px rgb(0 0 0 / 0.06), 0 8px 24px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 2px 4px rgb(0 0 0 / 0.08), 0 16px 40px rgb(0 0 0 / 0.12);
+
+  /* Inter com eixo óptico (opsz): em tamanhos grandes vira "Inter Display" */
+  --font-sans: "Inter Variable", "Inter", -apple-system, system-ui, sans-serif;
+
+  /* Paleta da marca */
+  --brand-primary: #c5fe59;
+  --brand-secondary: #8f7df8;
+  --brand-black: #11141b;
+  --brand-white: #f7faff;
+
+  --background: #eceff5;
+  --foreground: var(--brand-black);
+  --card: var(--brand-white);
+  --card-foreground: var(--brand-black);
+  --popover: var(--brand-white);
+  --popover-foreground: var(--brand-black);
+  --surface: #f1f4fa;
+  --surface-foreground: var(--brand-black);
+
+  --primary: var(--brand-primary);
+  --primary-foreground: var(--brand-black);
+  --primary-active: color-mix(in oklch, var(--primary), black 10%);
+  --contrast: var(--brand-black);
+  --contrast-foreground: var(--brand-white);
+  /* `secondary` do shadcn = superfície neutra (tiles, botões neutros). A secundária da marca é `brand-secondary`. */
+  --secondary: #e4e8f0;
+  --secondary-foreground: var(--brand-black);
+  --muted: #e9ecf3;
+  --muted-foreground: #5f6675;
+  --accent: #e2e6ee;
+  --accent-foreground: var(--brand-black);
+
+  --destructive: #d63c37;
+  --destructive-foreground: var(--brand-white);
+  --success: #16a34a;
+  --success-foreground: var(--brand-white);
+  --warning: #c27803;
+  --warning-foreground: var(--brand-white);
+  --info: #2457e6;
+  --info-foreground: var(--brand-white);
+
+  --border: rgb(17 20 27 / 0.08);
+  --input: rgb(17 20 27 / 0.1);
+  /* No claro, o anel usa a primária escurecida para ficar visível */
+  --ring: color-mix(in oklch, var(--primary), black 35%);
+
+  --sidebar: var(--brand-white);
+  --sidebar-foreground: var(--brand-black);
+  --sidebar-primary: var(--brand-black);
+  --sidebar-primary-foreground: var(--brand-white);
+  --sidebar-accent: #e9ecf3;
+  --sidebar-accent-foreground: var(--brand-black);
+  --sidebar-border: rgb(17 20 27 / 0.08);
+  --sidebar-ring: var(--ring);
+
+  /* Brilho do canto superior direito (fundo das telas): primária clareada, acompanha a cor primária */
+  --glow: radial-gradient(60% 45% at 85% 0%, color-mix(in oklch, var(--glow-color) 28%, transparent), transparent 70%);
+  /* Painel interno dos cards (gradiente sutil de cima para baixo) */
+  --panel-gradient: linear-gradient(180deg, rgb(17 20 27 / 0.04), rgb(17 20 27 / 0));
+}
+
+/* ---------- Tema escuro (principal, dos mockups) ---------- */
+:root { /* .dark do DS, promovido a :root (Vault só-escuro) */
+  --background: var(--brand-black);
+  --foreground: var(--brand-white);
+  --card: #171b23;
+  --card-foreground: var(--brand-white);
+  --popover: #1b1f28;
+  --popover-foreground: var(--brand-white);
+  --surface: #1d222b;
+  --surface-foreground: var(--brand-white);
+
+  --primary: var(--brand-primary);
+  --primary-foreground: var(--brand-black);
+  --primary-active: color-mix(in oklch, var(--primary), white 30%);
+  --contrast: var(--brand-white);
+  --contrast-foreground: var(--brand-black);
+  --secondary: #242933;
+  --secondary-foreground: var(--brand-white);
+  --muted: #20252e;
+  --muted-foreground: #9aa1af;
+  --accent: #282d38;
+  --accent-foreground: var(--brand-white);
+
+  --destructive: #e84a45;
+  --destructive-foreground: var(--brand-white);
+  --success: #3fcb6e;
+  --success-foreground: var(--brand-black);
+  --warning: #f5a524;
+  --warning-foreground: var(--brand-black);
+  --info: #4c7dff;
+  --info-foreground: var(--brand-white);
+
+  --border: rgb(247 250 255 / 0.06);
+  --input: rgb(247 250 255 / 0.08);
+  --ring: var(--primary);
+
+  --sidebar: var(--brand-black);
+  --sidebar-foreground: var(--brand-white);
+  --sidebar-primary: var(--brand-white);
+  --sidebar-primary-foreground: var(--brand-black);
+  --sidebar-accent: #20252e;
+  --sidebar-accent-foreground: var(--brand-white);
+  --sidebar-border: rgb(247 250 255 / 0.06);
+  --sidebar-ring: var(--ring);
+
+  --glow: radial-gradient(55% 40% at 80% 0%, color-mix(in oklch, var(--glow-color) 14%, transparent), transparent 70%);
+  --panel-gradient: linear-gradient(180deg, rgb(247 250 255 / 0.07), rgb(247 250 255 / 0) 70%);
+}
+
+/*
+ * ---------- Derivados (recalculados em cada tema) ----------
+ * Variáveis que dependem de outras que mudam no .dark (--primary, --foreground, --card). Uma custom
+ * property é calculada no elemento onde é declarada e herdada já pronta: se ficassem só no :root,
+ * um .dark aplicado num elemento interno (e não no <html>) herdaria os valores do tema claro.
+ */
+:root,
+.dark {
+  /* Dados: só cores da paleta. A série principal é sempre a primária. */
+  --chart-1: var(--primary);
+  --chart-2: var(--brand-secondary);
+  --chart-3: var(--foreground);
+  --chart-4: color-mix(in oklch, var(--chart-1) 50%, var(--card));
+  --chart-5: color-mix(in oklch, var(--chart-2) 50%, var(--card));
+
+  --glow-color: var(--primary);
+}
+
+/*
+ * ---------- Modo "só paleta" ----------
+ * Remapeia os status (sucesso, atenção, erro, informação) para cores da marca.
+ * Usado nas páginas de exemplo: aplique a classe `palette-brand` na raiz da tela.
+ */
+.palette-brand {
+  /* claro: primária escurecida para texto legível sobre fundo claro */
+  --success: color-mix(in oklch, var(--brand-primary), black 45%);
+  --success-foreground: var(--brand-white);
+  --warning: var(--brand-secondary);
+  --warning-foreground: var(--brand-black);
+  --info: var(--brand-secondary);
+  --info-foreground: var(--brand-black);
+  --destructive: var(--foreground);
+  --destructive-foreground: var(--background);
+}
+.dark .palette-brand,
+.dark.palette-brand {
+  --success: var(--brand-primary);
+  --success-foreground: var(--brand-black);
+}

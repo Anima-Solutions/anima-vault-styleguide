@@ -71,6 +71,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new (require("./config/anima/copyAnimaTheme"))(), // [anima] tema único Ânima Vault
     new I18nextExtractionPlugin(),
     new CopyPlugin({
       patterns: [{ from: path.resolve(__dirname, "./src/locales"), to: path.resolve(__dirname, "./build/locales") }],

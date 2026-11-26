@@ -19,6 +19,7 @@ const packageJson = require("../package.json");
 
 const ROOT_DIR = path.resolve(__dirname, "..");
 const THEMES = ["default", "midgar", "solarized_dark", "solarized_light", "sakura", "layette"];
+THEMES.push("anima"); // [anima] tema Ânima Vault, copiado sobre os demais por config/anima/copyAnimaTheme.js
 
 const buildLessEntries = () => {
   const rootThemesPath = path.resolve(ROOT_DIR, "src/less/themes");

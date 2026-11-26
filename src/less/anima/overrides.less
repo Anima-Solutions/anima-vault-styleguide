@@ -1,0 +1,39 @@
+/**
+ * Ânima Vault: ajustes visuais que não cabem em variáveis (tipografia e elevação).
+ *
+ * São regras de SOBREPOSIÇÃO, carregadas no fim de cada entrada do tema `anima`: nenhum arquivo base
+ * do upstream é editado. Mantenha este arquivo curto. Se uma regra precisar de mais do que alguns seletores,
+ * provavelmente é uma variável do Passbolt que falta mapear em colors.less.
+ */
+
+/* ---------- Tipografia: Inter Variable (opsz) do DS no lugar da Open Sans ----------
+ * Inconsolata (senhas, fingerprints) e Obfuscation (máscara de segredos) são funcionais e continuam. */
+html {
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: var(--font-sans);
+}
+
+/* Títulos e números usam Medium (500) no DS. */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Elevação: o DS separa níveis pela cor da superfície, não por sombra ----------
+ * Camadas flutuantes (menus, popovers, dropdowns) usam shadow-lg; o resto fica sem sombra. */
+.dropdown-content,
+.contextual-menu {
+  box-shadow: var(--shadow-lg);
+}

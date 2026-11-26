@@ -1,0 +1,14 @@
+/**
+ * Ânima Vault: camada de tema. Importada no FIM de cada entrada de src/less/themes/anima/*.less.
+ *
+ *   ds/tokens.css   tokens do Ânima Design System (GERADO; .dark promovido a :root)
+ *   ds/fonts.less   @font-face da Inter Variable (GERADO; woff2 em src/fonts/anima)
+ *   colors.less     tokens do DS → variáveis do Passbolt (mantido à mão)
+ *   overrides.less  tipografia e elevação (mantido à mão)
+ *
+ * `(inline)`: o tokens.css entra como CSS puro, sem passar pelo parser do LESS (preserva color-mix()).
+ */
+@import (inline) "./ds/tokens.css";
+@import "./ds/fonts.less";
+@import "./colors.less";
+@import "./overrides.less";

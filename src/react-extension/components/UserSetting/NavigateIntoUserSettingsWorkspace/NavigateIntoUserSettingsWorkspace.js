@@ -38,7 +38,7 @@ class NavigateIntoUserSettingsWorkspace extends React.Component {
    * @returns {bool}
    */
   get canIUseThemeCapability() {
-    return this.props.context.siteSettings && this.props.context.siteSettings.canIUse("accountSettings");
+    return false; // [anima] Ânima Vault tem um único tema (escuro): o seletor fica oculto. Ver README-ANIMA.md.
   }
 
   /**

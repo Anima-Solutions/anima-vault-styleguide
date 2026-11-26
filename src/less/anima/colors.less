@@ -1,0 +1,159 @@
+/**
+ * Ânima Vault: mapeamento dos tokens do Ânima Design System para as variáveis do Passbolt.
+ *
+ * Fica no fim de cada entrada do tema `anima`, DEPOIS de abstractions/color_variables_midgar.less (do
+ * upstream, intacto). Os dois declaram custom properties em :root, e a ordem decide: o que está aqui vence.
+ * Assim, variáveis novas que o upstream acrescentar ao Midgar continuam funcionando (herdando da paleta)
+ * e só precisamos manter o que de fato difere.
+ *
+ * Regras:
+ *  - Use SEMPRE os tokens do DS (var(--background), var(--primary)…). Nada de hexadecimal aqui.
+ *  - Os tokens vêm de ./ds/tokens.css (gerado por anima-vault/scripts/sync-ds.mjs).
+ *  - Fundos de status atenuados seguem a regra do DS: o papel com opacidade (color-mix com transparent).
+ *  - color-mix() é resolvido pelo navegador (Chrome ≥ 111, Firefox ≥ 113; a extensão exige 129/140).
+ *
+ * Unidade: o Passbolt usa html { font-size: 62.5% }, então 1rem = 10px. Os tokens do DS estão em px.
+ */
+
+:root {
+  /* ---------- 1. Paleta do Midgar → tokens do DS ----------
+   * O Midgar define uma escala de cinzas (Gradient-1 = preto … Gradient-9 = branco) e 5 cores de contraste.
+   * Quase todas as ~180 variáveis semânticas apontam para ela, então remapear a paleta cobre a maior parte da UI. */
+  --Palette-passbolt-red: var(--primary);
+  --Palette-Gradient-1: var(--background);
+  --Palette-Gradient-2: var(--card);
+  --Palette-Gradient-3: var(--card);
+  --Palette-Gradient-4: var(--surface);
+  --Palette-Gradient-5: var(--accent);
+  /* Cinzas intermediários não existem como token: derivados do texto sobre o fundo. */
+  --Palette-Gradient-6: color-mix(in oklch, var(--foreground) 28%, var(--background));
+  --Palette-Gradient-7: color-mix(in oklch, var(--foreground) 42%, var(--background));
+  --Palette-Gradient-8: var(--muted-foreground);
+  --Palette-Gradient-9: var(--foreground);
+  --Palette-Contrast-1: var(--primary);      /* azul do Passbolt: ação principal, foco, seleção */
+  --Palette-Contrast-2: var(--warning);      /* laranja: alertas */
+  --Palette-Contrast-3: var(--destructive);  /* vermelho: erros */
+  --Palette-Contrast-4: var(--success);      /* verde: sucesso */
+  --Palette-Contrast-5: var(--brand-secondary); /* amarelo: favoritos, destaques Pro → secundária da marca */
+  --Palette-Shadow: rgb(0 0 0 / 0.5);
+  --Palette-Highlight: color-mix(in oklch, var(--foreground) 8%, transparent);
+  --Palette-New: color-mix(in oklch, var(--info) 15%, transparent);
+  --Palette-Success: color-mix(in oklch, var(--success) 15%, transparent);
+  --Palette-Error: color-mix(in oklch, var(--destructive) 15%, transparent);
+  --Palette-Warning: color-mix(in oklch, var(--warning) 15%, transparent);
+  --Palette-Info: color-mix(in oklch, var(--info) 15%, transparent);
+  --Palette-Select: color-mix(in oklch, var(--primary) 14%, transparent);
+  --Palette-Select-highlight-1: color-mix(in oklch, var(--primary) 10%, transparent);
+  --Palette-Select-highlight-2: color-mix(in oklch, var(--primary) 6%, transparent);
+
+  --Text-and-icons-clear-color: var(--foreground);
+  --Text-and-icons-dark-color: var(--background);
+
+  /* ---------- 2. Superfícies: o DS aninha background → card → surface → muted ----------
+   * No Midgar o fundo da área de trabalho é MAIS CLARO que os painéis. No DS é o contrário. */
+  --Workspace-Workspace-background: var(--background);
+  --Workspace-Panels-background: var(--card);
+  --Sections-Section-background: var(--card);
+  --Workspace-bar-Workspace-bar-background: var(--background);
+  --Workspace-bar-Workspace-bar-text: var(--muted-foreground);
+  --Workspace-Main-search-field: var(--surface);
+  --Workspace-Workspace-button-background: var(--secondary);
+  --Workspace-Dividers: var(--border);
+  --Workspace-Dividers-lighter: var(--border);
+  --Workspace-Menu-Dividers: var(--border);
+  --Grid-Grid-hover-row: var(--accent);
+  --Dialog-Dialog-fill: var(--card);
+  --Dialog-Dialog-header-and-footer: var(--card);
+  --Dialog-Dialog-background: rgb(0 0 0 / 0.6);
+  --Help-box-Help-box-background: var(--surface);
+  --Login-Login-background: var(--card);
+  --Login-SSO-button-background: var(--secondary);
+  --Quick-Access-Header-and-footer-background: var(--card);
+  --Quick-Access-Panel-background: var(--background);
+  --Quick-Access-Filter-hover: var(--accent);
+  --Action-button-Menu-action-button-background: var(--popover);
+  --Primary-button-Primary-button-menu-background: var(--popover);
+  --Tool-tip-Tool-tip-background: var(--popover);
+  --Tool-tip-Tool-tip-text: var(--popover-foreground);
+  --Tool-tip-Tool-tip-divider: var(--border);
+  --Menu-drop-shadow-Menu-drop-shadow: rgb(0 0 0 / 0.12);
+
+  /* ---------- 3. Ações: a primária do DS é verde-limão com TEXTO ESCURO ----------
+   * No Passbolt o texto sobre a cor primária é branco; aqui ele precisa ser --primary-foreground. */
+  --Primary-button-Primary-button-background: var(--primary);
+  --Primary-button-Primary-button-text: var(--primary-foreground);
+  --Quick-Access-Primary-button-background: var(--primary);
+  --Quick-Access-Primary-button-text: var(--primary-foreground);
+  --Login-Login-button-background: var(--primary);
+  --Action-button-Action-button-background: var(--secondary);
+  --Action-button-Action-button-background-2: var(--accent);
+  --Action-button-Action-button-border: var(--border);
+  --Action-button-Secondary-button-background: var(--secondary);
+  --Action-button-Active-action-button-background: var(--contrast);
+  --Action-button-Active-action-button-border: var(--contrast);
+  --Context-buttons-Context-button-background: var(--secondary);
+  --Context-buttons-Context-button-border: var(--border);
+  --Counter-Counter-background: var(--primary);
+  --Counter-Counter-text: var(--primary-foreground);
+  --Drag-and-drop-Drag-and-drop-counter-text: var(--primary-foreground);
+  --Spinner-Button-spinner-background: color-mix(in oklch, var(--primary-foreground) 30%, transparent);
+  --Spinner-Button-spinner-foreground: var(--primary-foreground);
+  --States-Focus: var(--ring);
+
+  /* ---------- 4. Campos ---------- */
+  --Field-Field-background: var(--background);
+  --Field-Field-border: var(--input);
+  --Field-Field-border-focus: var(--ring);
+  --Field-Inline-button-background: var(--secondary);
+  --Field-Field-button-background: var(--secondary);
+  --Field-Field-button-border: var(--border);
+  --Field-Infield-button-background: var(--secondary);
+  --Field-Infield-search-background: var(--surface);
+  --Checkbox-Checkbox-background: var(--background);
+  --Checkbox-Checkbox-border: var(--input);
+  --Checkbox-Checkbox-tick: var(--primary-foreground);
+  --Checkbox-V2-Border-default: color-mix(in oklch, var(--foreground) 28%, transparent);
+  --Checkbox-V2-Border-active: var(--primary);
+  --Checkbox-V2-Tick: var(--primary);
+  --Toggle-Toggle-on-background: var(--primary);
+  --Toggle-Toggle-on-background-2: var(--primary);
+  --Toggle-Toggle-off-background: var(--accent);
+  --Toggle-Toggle-knob: var(--foreground);
+
+  /* ---------- 5. Etiquetas, status e itens de lista ---------- */
+  --Tags-Tag-background: var(--secondary);
+  --Tags-Active-tag-background: var(--Palette-Select);
+  --Status-and-role-pills-Status-pill-text: var(--foreground);
+  --Status-and-role-pills-Role-pill-admin-background: var(--contrast);
+  --Status-and-role-pills-Role-pill-admin-text: var(--contrast-foreground);
+  --Status-and-role-pills-Role-pill-user-background: var(--secondary);
+  --Status-and-role-pills-Role-pill-user-text: var(--secondary-foreground);
+  --Avatar-Avatar-background: var(--secondary);
+  --Avatar-Avatar: var(--secondary-foreground);
+  --Resource-icon-Resource-icons-backgound: var(--secondary);
+  --Resource-icon-Resource-icon-color: var(--secondary-foreground);
+  --Resource-icon-Starred: var(--brand-secondary);
+  --Favourite-Favourite-on: var(--brand-secondary);
+  --Notifications-Badge-background: var(--destructive);
+  --Notifications-Badge-number: var(--destructive-foreground);
+  --Alert-Alert-icon: var(--warning-foreground);
+
+  /* ---------- 6. Logo (componentes que ainda colorem o logo via CSS) ---------- */
+  --Passbolt-logo-passbolt-logo: var(--primary);
+  --Passbolt-logo-passbolt-logo---text: var(--foreground);
+
+  /* ---------- 7. Raios: escala do DS ----------
+   * Controles (botões, campos) 12px, menus e popovers 16px, seções 20px. Os 28px dos cards do DS ficam de
+   * fora de propósito: as "seções" do Passbolt são painéis densos, não cards de dashboard. */
+  --Section-border-radius: var(--radius-3xl);
+  --Button-border-radius: var(--radius-xl);
+  --Login-button-radius: var(--radius-xl);
+  --Contextual-bar-radius: var(--radius-2xl);
+  --Action-bar-radius: var(--radius-2xl);
+  --Menu-radius: var(--radius-2xl);
+  --Inside-button: var(--radius-md);
+  --Workspace-selection-button-radius: var(--radius-xl);
+  --High-level-preview-radius: var(--radius-md);
+  --Progress-Bar-radius: var(--radius-sm);
+  --Token-radius: var(--radius-sm);
+}
